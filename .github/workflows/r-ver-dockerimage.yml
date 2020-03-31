@@ -1,0 +1,16 @@
+name: R-VER-DEVEL Image CI
+
+on:
+  schedule:
+    - cron: '*/45 * * * *'
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: docker build . --file r-ver/devel.Dockerfile --tag nturaga/r-ver:devel-$(date +%s)
