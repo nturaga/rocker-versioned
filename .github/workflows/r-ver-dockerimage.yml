@@ -2,7 +2,7 @@ name: R-VER-DEVEL Image CI
 
 on:
   schedule:
-    - cron: '*/45 * * * *'
+    - cron: '*/20 * * * *'
 
 jobs:
 
